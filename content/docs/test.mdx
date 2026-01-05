@@ -3,22 +3,31 @@ title: Installation
 description: How to install and setup SabalongUI in your project.
 ---
 
-### 1. Install the Package
+import { Card, Cards } from 'fumadocs-ui/components/card';
+
+## Quick Start
+
+Select your preferred framework to get started with SabalongUI. These guides assume you already have a project with Tailwind CSS installed.
+
+<Cards>
+  <Card title="Next.js" href="framework/nextjs-installation">
+    Setup instructions for Next.js App Router and Pages Router.
+  </Card>
+  <Card title="React Vite" href="framework/nextjs-installation">
+    Guide for setting up SabalongUI in a Vite-powered environment.
+  </Card>
+</Cards>
+
+## General Installation
+
+### Install the Package
 
 Install **sabalong-ui** and its peer dependencies via npm:
 
 ```bash
 npm install sabalong-ui
+
 ```
-add this code in global.css
-
-```css
-@import "tailwindcss";
-
-@source "../../node_modules/sabalong-ui/dist";
-```
-
-
 ### Example Usage Components
 
 ```tsx

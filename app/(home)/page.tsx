@@ -26,14 +26,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex gap-6 items-center">
-          <Link 
-            href="/docs/introduction" 
-            className="group bg-indigo-600 hover:bg-indigo-500 flex items-center gap-2 py-2 px-2 rounded-full text-white font-medium transition-all shadow-lg shadow-indigo-500/20"
-          >
-            Get Started 
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform" size={16}/>
-          </Link>
+        <div className="flex gap-4 items-center">
+          <ButtonDark
+          title="Get Started"
+          href="/docs/components/alert"
+          />
           
           <Link 
             href="docs/components/alert" 
