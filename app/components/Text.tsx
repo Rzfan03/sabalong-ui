@@ -2,21 +2,22 @@ import React, { ReactNode } from "react"
 import Link from "next/link";
 
 interface TextWrapper {
-    children: ReactNode;
+    children?: ReactNode;
     className?: string
+    costum?: string
 }
 
 
-export function Text({children}:TextWrapper) {
+export function Text({children, costum}:TextWrapper) {
     return(
-        <p>
+        <p className={costum}>
             {children}
         </p>
     )
 }
 
 interface TextLinkWrapper {
-    children: ReactNode;
+    children?: ReactNode;
     className?: string
     href: string
 }

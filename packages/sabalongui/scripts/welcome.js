@@ -1,26 +1,34 @@
-// packages/sabalongui/scripts/welcome.js
-
 const loadingChars = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
-let i = 0;
+const totalSteps = 20;
+let currentStep = 0;
 
-console.log('\n');
-console.log('\x1b[36m%s\x1b[0m', 'Menginstall Sabalong-UI');
+console.log('\n\x1b[36m%s\x1b[0m', '  Preparing SabalongUI...');
 
 const loader = setInterval(() => {
-  process.stdout.write(`\r\x1b[34m${loadingChars[i++ % loadingChars.length]}\x1b[0m Finalizing installation...`);
+  const char = loadingChars[currentStep % loadingChars.length];
+  const progress = Math.round((currentStep / totalSteps) * 100);
+  const bar = '█'.repeat(Math.floor(currentStep / 2)) + '░'.repeat(10 - Math.floor(currentStep / 2));
+  
+  process.stdout.write(`\r  \x1b[34m${char}\x1b[0m  [${bar}] ${progress}%`);
+  
+  if (currentStep >= totalSteps) {
+    clearInterval(loader);
+    process.stdout.write('\r\x1b[K');
+    showFinalMessage();
+  }
+  currentStep++;
 }, 100);
 
-setTimeout(() => {
-  clearInterval(loader);
-  process.stdout.write('\r'); 
+function showFinalMessage() {
+  console.log('  \x1b[32m✔\x1b[0m  \x1b[1mInstallation Complete!\x1b[0m');
+  console.log('\n  \x1b[1m\x1b[33m"Lamen sate balong kenang sabalong"\x1b[0m');
+  console.log('  \x1b[35mSilamo sia ngoding! 🚀\x1b[0m');
   
-  console.log('\x1b[32m%s\x1b[0m', 'Installation Complete!');
-  console.log('\x1b[1m\x1b[33m%s\x1b[0m', '          Silamo sia ngoding! 🚀');
+  console.log('\n  \x1b[90m─────────────────────────────────────────\x1b[0m');
+  console.log('  \x1b[37mDeveloper :\x1b[0m \x1b[1mRzfan03\x1b[0m');
+  console.log('  \x1b[37mGitHub    :\x1b[0m \x1b[36mhttps://github.com/Rzfan03\x1b[0m');
+  console.log('  \x1b[37mDocs      :\x1b[0m \x1b[34mhttps://sabalong-ui.vercel.app\x1b[0m');
+  console.log('  \x1b[90m─────────────────────────────────────────\x1b[0m\n');
   
-  // Developer Info & Clickable Link
-  console.log('\x1b[37m%s\x1b[0m', 'Developer: Rzfan03');
-  console.log('\x1b[36m%s\x1b[0m', 'GitHub: \x1b]8;;https://github.com/Rzfan03\x07https://github.com/Rzfan03\x1b]8;;\x07');
-  console.log('\x1b[34m%s\x1b[0m', 'Docs: https://sabalong-ui.vercel.app');
-  
-  console.log('\n');
-}, 2000);
+  process.exit(0);
+}

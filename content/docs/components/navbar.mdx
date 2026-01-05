@@ -1,0 +1,31 @@
+---
+title: Navbar
+description: Components for navigation your Web
+---
+
+<div className="h-fit border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { Navbar } from "@/app/components/Navbar";
+import { Text, TextLink } from "@/app/components/Text.tsx"
+
+<Navbar logo="/logo.png">
+    <Text costum="bg-zinc-500 px-3 py-2 rounded-lg">Home</Text>
+        <Text costum="hover:bg-zinc-500 px-3 py-2 rounded-lg">About</Text>
+        <Text costum="hover:bg-zinc-500 px-3 py-2 rounded-lg">Contact</Text>
+    <TextLink href="https://github.com/Rzfan03">Github</TextLink>
+</Navbar>
+</div>
+
+
+### Usage 
+
+```tsx
+import { Navbar } from "@/app/components/Navbar";
+import { Text, TextLink } from "@/app/components/Text.tsx"
+
+<Navbar logo="/logo.png">
+    <Text costum="bg-zinc-500 px-3 py-2 rounded-lg">Home</Text>
+        <Text costum="hover:bg-zinc-500 px-3 py-2 rounded-lg">About</Text>
+        <Text costum="hover:bg-zinc-500 px-3 py-2 rounded-lg">Contact</Text>
+    <TextLink href="https://github.com/Rzfan03">Github</TextLink>
+</Navbar>
+```
