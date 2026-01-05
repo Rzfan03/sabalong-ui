@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex gap-4 items-center">
           <ButtonDark
           title="Get Started"
-          href="/docs/components/alert"
+          href="docs/introduction"
           />
           
           <Link 
