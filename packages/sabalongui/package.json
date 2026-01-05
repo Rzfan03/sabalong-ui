@@ -1,0 +1,29 @@
+{
+  "name": "sabalong-ui",
+  "version": "0.0.3",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "scripts",
+    "logo.png",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsup src/index.tsx --format cjs,esm --watch --dts --clean",
+    "build": "tsup src/index.tsx --format cjs,esm --dts --minify --clean",
+    "postinstall": "node ./scripts/welcome.js"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

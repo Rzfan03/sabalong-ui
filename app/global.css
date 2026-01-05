@@ -1,3 +1,21 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+
+@source "../../packages/sabalongui/src/**/*.{tsx,ts}";
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+
+:root {
+  --fd-nav-height: 80px !important;
+}

@@ -1,0 +1,73 @@
+---
+title: Alert
+description: Components to display alert.
+---
+
+
+### Failed Alert
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { Alert } from "@/app/components/Alert";
+
+<Alert/>
+</div>
+
+### Usage
+
+```tsx
+import { Alert } from "sabalong-ui";
+
+<Alert/>
+
+```
+
+
+### Success Alert
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { AlertGreen } from "@/app/components/Alert";
+
+<AlertGreen/>
+</div>
+
+### Usage
+
+```tsx
+import { AlertGreen } from "sabalong-ui";
+
+<AlertGreen/>
+
+```
+
+
+### Neutral Alert
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { AlertNeutral } from "@/app/components/Alert";
+
+<AlertNeutral/>
+</div>
+
+### Usage
+
+```tsx
+import { AlertNeutral } from "sabalong-ui";
+
+<AlertNeutral/>
+
+```
+
+### Costum Text
+you can costum alert message
+
+```tsx
+<Alert
+ Text="Example Message"
+/>
+
+<AlertGreen
+ Text="Example Message"
+/>
+
+<AlertNeutral
+ Text="Example Message"
+/>
+
+```

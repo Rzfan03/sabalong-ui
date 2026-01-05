@@ -1,17 +1,39 @@
 ---
-title: Components
-description: Components
+title: Installation
+description: How to install and setup SabalongUI in your project.
 ---
 
-## Code Block
+### 1. Install the Package
 
-```js
-console.log('Hello World');
+Install **sabalong-ui** and its peer dependencies via npm:
+
+```bash
+npm install sabalong-ui
+```
+add this code in global.css
+
+```css
+@import "tailwindcss";
+
+@source "../../node_modules/sabalong-ui/dist";
 ```
 
-## Cards
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
-</Cards>
+### Example Usage Components
+
+```tsx
+import { AlertGreen, Button, Badge } from "sabalong-ui";
+
+export default function ExamplePage() {
+  return (
+    <div className="p-6 space-y-4">
+      <AlertGreen message="SabalongUI is ready to use!" />
+      
+      <div className="flex items-center gap-2">
+        <Button label="Action Button" onClick={() => console.log('Clicked!')} />
+        <Badge/>
+      </div>
+    </div>
+  );
+}
+```

@@ -1,0 +1,50 @@
+---
+title: Avatar
+description: Display user profile pictures.
+---
+
+### All Avatar
+
+<div className="h-[30vh] border border-zinc-700 gap-2 rounded-lg p-8 flex justify-center items-center">
+import { Avatar, AvatarOnlineIndicator, AvatarStr } from "@/app/components/Avatar";
+
+
+<Avatar 
+UrlImage="/avatar.jpg" 
+Width={80} 
+Height={80} 
+alt="avatar" />
+
+  <AvatarOnlineIndicator 
+  UrlImage="/avatar-2.jpg" 
+  Width={80} 
+  Height={80} 
+  alt="avatar" />
+
+    <AvatarStr Text="AF"/>
+</div>
+
+
+### Usage 
+
+```tsx
+import { Avatar, AvatarOnlineIndicator, AvatarFallBack } from "@/sabalong-ui";
+
+
+<Avatar 
+UrlImage="/avatar.jpg" 
+Width={80} 
+Height={80} 
+alt="avatar" />
+
+<AvatarOnlineIndicator 
+UrlImage="/avatar.jpg" 
+Width={80} 
+Height={80} 
+alt="avatar" />
+
+<AvatarStr Text="AF"/>
+
+```
+
+

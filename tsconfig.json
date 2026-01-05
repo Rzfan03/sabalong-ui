@@ -14,10 +14,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "incremental": true,
+    "incremental": false,
     "paths": {
       "@/*": ["./*"],
-      "fumadocs-mdx:collections/*": [".source/*"]
+      "fumadocs-mdx:collections/*": [".source/*"],
+      "sabalong-ui": ["./packages/sabalongui/src/index.tsx"]
     },
     "plugins": [
       {
@@ -31,6 +32,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "content/docs/components/alert.mdx", "content/docs/components/form.mdx"  ],
   "exclude": ["node_modules"]
 }
