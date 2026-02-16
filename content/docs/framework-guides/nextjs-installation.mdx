@@ -9,6 +9,27 @@ description: How to install and setup SabalongUI in NextJS
 npx create-next-app@latest
 ```
 
+### Install Tailwindcss
+```bash
+npm install tailwindcss @tailwindcss/postcss postcss
+````
+
+### Configure PostCss
+```bash
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+
+export default config;
+```
+
+### Import tailwindcss
+```bash
+@import "tailwindcss";
+```
+
 ### Setup SabalongUI
 ```bash
 npm install sabalong-ui

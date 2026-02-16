@@ -1,11 +1,13 @@
+"use client"
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import Accordion from "../components/Accordion";
 import { FiBox } from "react-icons/fi";
 import { Alert, AlertGreen, AlertNeutral } from "../components/Alert";
-import { ButtonDark, ButtonLight } from "../components/Button";
+import Button from "../components/Button";
 import { InputDark, InputLight } from "../components/Input";
 import { VerifiedBadge, DefaultBadge } from "../components/Badge";
-import { FormDark, FormLight } from "../components/Form";
+import Form from "../components/Form";
 import { Avatar, AvatarOnlineIndicator, AvatarStr } from "../components/Avatar";
 import { Chip } from "../components/Chip";
 import { CheckBox } from "../components/CheckBox";
@@ -13,7 +15,7 @@ import { CheckBox } from "../components/CheckBox";
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row justify-around items-center h-screen w-full px-25 overflow-hidden bg-black">
+    <main className="flex flex-col lg:flex-row justify-around items-center h-[92vh] w-full px-25 overflow-hidden bg-black">
       
       <section className="flex flex-col justify-center items-start gap-10 text-left max-w-xl py-10">
         <div className="flex flex-col gap-4">
@@ -27,7 +29,8 @@ export default function Home() {
         </div>
 
         <div className="flex gap-4 items-center">
-          <ButtonDark
+          <Button
+          variant="dark"
           title="Get Started"
           href="docs/introduction"
           />
@@ -54,8 +57,8 @@ export default function Home() {
 
           <div className="flex flex-col gap-3">
             <h2 className="text-zinc-500 text-sm font-mono uppercase tracking-tighter">Button</h2>
-            <ButtonDark title="Dark Button" href="/" />
-            <ButtonLight title="Light Button" href="/" />
+            <Button onClick={() => {alert("workkk")}} variant="dark" title="Dark Button" href="/" />
+            <Button variant="light" title="Light Button" href="/" />
           </div>
 
           <div className="flex flex-col gap-5">
@@ -70,11 +73,16 @@ export default function Home() {
               <VerifiedBadge/>
               <DefaultBadge/>
             </div>
+            <h2 className="text-zinc-500 text-sm font-mono uppercase tracking-tighter mt-2">Accordion</h2>
+            <Accordion title="Who Rzfan03?">
+              cowo gantengg
+            </Accordion>
           </div>
+          
 
           <div className="flex flex-col gap-5">
             <h2 className="text-zinc-500 text-sm font-mono uppercase tracking-tighter">Form</h2>
-            <FormDark/>
+            <Form mode="dark"/>
           </div>
 
           <div className="flex flex-col gap-5">

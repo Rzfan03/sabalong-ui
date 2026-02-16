@@ -4,16 +4,35 @@ description: How to install and setup SabalongUI in your project.
 ---
 
 import { Card, Cards } from 'fumadocs-ui/components/card';
+import { RiNextjsFill } from "react-icons/ri";
+import { SiVite } from "react-icons/si";
 
 ## Quick Start
 
 Select your preferred framework to get started with SabalongUI. These guides assume you already have a project with Tailwind CSS installed.
 
 <Cards>
-  <Card title="Next.js" href="framework/nextjs-installation">
+  <Card 
+    href="framework-guides/nextjs-installation"
+    title={
+      <div className="flex items-center gap-3 text-lg">
+        <RiNextjsFill className="w-8 h-8" /> 
+        <span>Next.js</span>
+      </div>
+    }
+  >
     Setup instructions for Next.js App Router and Pages Router.
   </Card>
-  <Card title="React Vite" href="framework/vite-installation">
+
+  <Card 
+    href="framework-guides/vite-installation"
+    title={
+      <div className="flex items-center gap-3 text-lg">
+        <SiVite className="w-8 h-8" /> 
+        <span>React Vite</span>
+      </div>
+    }
+  >
     Guide for setting up SabalongUI in a Vite-powered environment.
   </Card>
 </Cards>
@@ -26,23 +45,3 @@ Install **sabalong-ui** and its peer dependencies via npm:
 
 ```bash
 npm install sabalong-ui
-
-```
-### Example Usage Components
-
-```tsx
-import { AlertGreen, Button, Badge } from "sabalong-ui";
-
-export default function ExamplePage() {
-  return (
-    <div className="p-6 space-y-4">
-      <AlertGreen message="SabalongUI is ready to use!" />
-      
-      <div className="flex items-center gap-2">
-        <Button label="Action Button" onClick={() => console.log('Clicked!')} />
-        <Badge/>
-      </div>
-    </div>
-  );
-}
-```
