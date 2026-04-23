@@ -5,6 +5,9 @@ import { Metadata } from 'next';
 export const metadata = {
   title: "SabalongUI | High-Performance React UI Library",
   description: "A comprehensive UI Library built with React and TailwindCSS by Rizqy Fajrul Syabani (Rzfan03).",
+  verification: {
+    google: 'oR1vFDbIf-85CemIwzQupghHx1F07kWTM9UCqgzdTG8',
+  },
   openGraph: {
     title: "SabalongUI - Silamo sia ngoding!",
     description: "Highly customizable UI components for modern web applications.",
