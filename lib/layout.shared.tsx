@@ -16,8 +16,8 @@ export const baseOptions = (): HomeLayoutProps => ({
       </div>
     ),
     transparentMode: 'always',
-    githubUrl: 'https://github.com/Rzfan03/sabalong-ui',
   },
+  githubUrl: 'https://github.com/Rzfan03/sabalong-ui',
   links: [
     {
       type: 'icon',
