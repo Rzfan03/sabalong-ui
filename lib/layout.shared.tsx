@@ -21,6 +21,9 @@ export const baseOptions = (): HomeLayoutProps => ({
   links: [
     {
       type: 'icon',
+      text: 'GitHub',
+      url: 'https://github.com/Rzfan03/sabalong-ui',
+      external: true,
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,9 +40,6 @@ export const baseOptions = (): HomeLayoutProps => ({
           <path d="M9 18c-4.51 2-5-2-7-2" />
         </svg>
       ),
-      label: 'GitHub',
-      url: 'https://github.com/Rzfan03/sabalong-ui',
-      external: true,
     },
   ],
 });
