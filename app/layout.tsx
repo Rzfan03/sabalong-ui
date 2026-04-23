@@ -9,7 +9,7 @@ const inter = Inter({
 export default function Layout({ children }: LayoutProps<'/'>) {
   return (
     <meta name="google-site-verification" content="oR1vFDbIf-85CemIwzQupghHx1F07kWTM9UCqgzdTG8" />
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider>{children}</RootProvider>
       </body>
