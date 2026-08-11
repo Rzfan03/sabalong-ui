@@ -23,3 +23,6 @@ yarn-error.log*
 .vercel
 next-env.d.ts
 node_modules
+
+# ai agent notes (local only)
+AGENTS.md
