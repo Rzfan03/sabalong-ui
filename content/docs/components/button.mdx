@@ -4,7 +4,7 @@ description: Trigger actions and events with clickable interactive elements.
 ---
 
 
-### Dark Button
+### Variants
 <div className="h-[30vh] max-md:flex-col max-md:h-[50vh] border gap-3 border-zinc-700 rounded-lg p-8 flex justify-center items-center">
 import Button from "@/app/components/Button";
 
@@ -12,17 +12,18 @@ import Button from "@/app/components/Button";
 <Button variant="light" title="Light Button" href="" />
 <Button variant="danger" title="Danger Button" href="" />
 <Button variant="success" title="Success Button" href="" />
+<Button variant="warn" title="Warn Button" href="" />
 <Button variant="primary" title="Primary Button" href="" />
 </div>
 
 
 ### Usage
 ```tsx
-import Button from "sabalong-ui";
+import { Button } from "sabalong-ui";
 
 <Button
-  variant="dark"
- title="Dark Button"
- href="path"
+  variant="primary"
+  title="Primary Button"
+  href="path"
 />
 ```

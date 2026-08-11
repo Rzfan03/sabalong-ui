@@ -1,0 +1,92 @@
+---
+title: Progress
+description: Visual indicator for loading, completion, or processing states.
+---
+
+### Controlled
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { ProgressControlled } from "@/app/components/Progress";
+
+<ProgressControlled />
+</div>
+
+### Usage
+```tsx
+import { Progress } from "sabalong-ui";
+
+const [value, setValue] = useState(65);
+
+<Progress value={value} showLabel onChange={setValue} />
+```
+
+### Success
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { ProgressSuccess } from "@/app/components/Progress";
+
+<ProgressSuccess />
+</div>
+
+### Usage
+```tsx
+import { Progress } from "sabalong-ui";
+
+<Progress value={75} variant="success" showLabel />
+```
+
+### Info
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { ProgressInfo } from "@/app/components/Progress";
+
+<ProgressInfo />
+</div>
+
+### Usage
+```tsx
+import { Progress } from "sabalong-ui";
+
+<Progress value={45} variant="info" showLabel />
+```
+
+### Warn
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { ProgressWarn } from "@/app/components/Progress";
+
+<ProgressWarn />
+</div>
+
+### Usage
+```tsx
+import { Progress } from "sabalong-ui";
+
+<Progress value={60} variant="warn" showLabel />
+```
+
+### Danger
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { ProgressDanger } from "@/app/components/Progress";
+
+<ProgressDanger />
+</div>
+
+### Usage
+```tsx
+import { Progress } from "sabalong-ui";
+
+<Progress value={85} variant="danger" showLabel />
+```
+
+### Indeterminate
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { ProgressIndeterminate } from "@/app/components/Progress";
+
+<ProgressIndeterminate />
+</div>
+
+### Usage
+```tsx
+import { Progress } from "sabalong-ui";
+
+<Progress indeterminate />
+```
+
+Set `indeterminate` for a loading mode without a definite value. The `value` is automatically clamped to 0–100.

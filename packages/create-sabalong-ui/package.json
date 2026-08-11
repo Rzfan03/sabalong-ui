@@ -1,0 +1,26 @@
+{
+  "name": "create-sabalong-ui",
+  "version": "4.1.1",
+  "description": "Scaffold a new project with SabalongUI - npm create sabalong-ui@latest",
+  "type": "module",
+  "bin": {
+    "create-sabalong-ui": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-vite",
+    "template-next"
+  ],
+  "keywords": [
+    "sabalong-ui",
+    "scaffold",
+    "starter",
+    "react",
+    "tailwindcss",
+    "ui-library"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}

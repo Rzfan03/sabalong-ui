@@ -1,0 +1,27 @@
+---
+title: Stat
+description: Compact card for displaying a metric with label and trend indicator.
+---
+
+### Stat Card
+<div className="h-fit border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import StatDemo from "@/app/components/Stat";
+
+<StatDemo />
+</div>
+
+### Usage
+```tsx
+import { Stat } from "sabalong-ui";
+import { IoPeople } from "react-icons/io5";
+
+<Stat
+  label="Total Users"
+  value="12.430"
+  trend="up"
+  trendLabel="+12.5%"
+  icon={<IoPeople />}
+/>
+```
+
+`trend="up"` shows a green arrow, `trend="down"` a red arrow. `icon` is optional and renders in the badge on the right.

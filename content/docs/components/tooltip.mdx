@@ -1,0 +1,22 @@
+---
+title: Tooltip
+description: Small contextual hint that appears on hover or focus.
+---
+
+### Tooltip
+<div className="h-fit border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import TooltipDemo from "@/app/components/Tooltip";
+
+<TooltipDemo />
+</div>
+
+### Usage
+```tsx
+import { Tooltip } from "sabalong-ui";
+
+<Tooltip label="Save changes" position="top">
+  <button>Hover me</button>
+</Tooltip>
+```
+
+`position` accepts `top` (default), `bottom`, `left`, or `right`.

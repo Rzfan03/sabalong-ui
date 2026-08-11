@@ -1,0 +1,26 @@
+---
+title: Timeline
+description: Vertical list of events with a progress marker and optional timestamps.
+---
+
+### Timeline
+<div className="h-fit border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import TimelineDemo from "@/app/components/Timeline";
+
+<TimelineDemo />
+</div>
+
+### Usage
+```tsx
+import { Timeline } from "sabalong-ui";
+
+<Timeline
+  items={[
+    { title: "Order placed", description: "Order received and added to the queue.", time: "10:02" },
+    { title: "Packing", description: "Item is being prepared by the warehouse.", time: "10:41", active: true },
+    { title: "Delivered", description: "Order arrived and was received.", time: "—" },
+  ]}
+/>
+```
+
+Items with `active: true` get a highlighted blue dot.

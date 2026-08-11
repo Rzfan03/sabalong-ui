@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react"
-import Link from "next/link";
 
 interface TextWrapper {
     children: ReactNode;
@@ -7,9 +6,9 @@ interface TextWrapper {
 }
 
 
-export function Text({children}:TextWrapper) {
+export function Text({children, className = ""}:TextWrapper) {
     return(
-        <p>
+        <p className={className}>
             {children}
         </p>
     )
@@ -22,8 +21,8 @@ interface TextLinkWrapper {
 }
 
 
-export function TextLink({children, href}:TextLinkWrapper) {
+export function TextLink({children, href, className = ""}:TextLinkWrapper) {
     return(
-        <Link href={href}>{children}</Link>
+        <a href={href} className={className}>{children}</a>
     )
 }

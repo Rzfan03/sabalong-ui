@@ -1,8 +1,8 @@
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-export function InputDark () {
+export function InputDark ({className = ""}: {className?: string}) {
     return(
-        <div className="p-3 w-full max-w-2xl flex justify-between items-center gap-3 rounded-2xl bg-zinc-900 text-zinc-200 outline-0 inset-shadow-sm inset-shadow-zinc-800">
+        <div className={`p-3 w-full max-w-2xl flex justify-between items-center gap-3 rounded-2xl bg-zinc-900 text-zinc-200 outline-0 inset-shadow-sm inset-shadow-zinc-800 ${className}`}>
 
             <input type="text" placeholder="Search Here" className="outline-0"/><FaMagnifyingGlass className="text-zinc-500"/>
         </div>
@@ -11,9 +11,9 @@ export function InputDark () {
 }
 
 
-export function InputLight () {
+export function InputLight ({className = ""}: {className?: string}) {
     return(
-        <div className="p-3 w-full max-w-2xl flex justify-between items-center gap-3 rounded-2xl bg-zinc-100 text-zinc-600 outline-0 inset-shadow-sm inset-shadow-zinc-200">
+        <div className={`p-3 w-full max-w-2xl flex justify-between items-center gap-3 rounded-2xl bg-zinc-100 text-zinc-600 outline-0 inset-shadow-sm inset-shadow-zinc-200 ${className}`}>
 
             <input type="text" placeholder="Search Here" className="outline-0"/><FaMagnifyingGlass className="text-zinc-500"/>
         </div>

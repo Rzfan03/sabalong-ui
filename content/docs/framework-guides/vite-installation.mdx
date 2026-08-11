@@ -5,6 +5,8 @@ description: How to install and setup SabalongUI in Vite
 
 ### Setup Vite
 
+> **Tip:** prefer a ready-to-run project? Run `npm create sabalong-ui@latest` and pick **Vite** — no manual steps needed.
+
 ```bash
 npm create vite@latest my-app -- --template react-ts
 ```
@@ -27,8 +29,9 @@ export default defineConfig({
 ```
 
 ### Import tailwindcss
-```bash
+```css
 @import "tailwindcss";
+@source "../node_modules/sabalong-ui/dist/**/*.{js,cjs,mjs}";
 ```
 
 ### Setup SabalongUI

@@ -1,6 +1,6 @@
 {
   "name": "sabalong-ui",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -24,6 +24,9 @@
   },
   "peerDependencies": {
     "react": "^19.0.0",
-    "tailwindcss": "^4.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "lucide-react": "^0.562.0",
+    "react-icons": "^5.5.0"
   }
 }

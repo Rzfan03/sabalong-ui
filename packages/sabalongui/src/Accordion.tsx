@@ -1,12 +1,12 @@
 "use client"
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import { FiChevronDown } from "react-icons/fi"
 
-export default function Accordion({ title, children }: { title?: string, children?: React.ReactNode }) {
+export default function Accordion({ title, children, className = "" }: { title?: string, children?: ReactNode, className?: string }) {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="rounded-lg w-full max-w-md border border-zinc-800 bg-zinc-900 text-zinc-200">
+    <div className={`rounded-lg w-full max-w-md border border-zinc-800 bg-zinc-900 text-zinc-200 ${className}`}>
       <button
         onClick={() => setOpen(!isOpen)}
         className="flex w-full items-center justify-between p-4 focus:outline-none"

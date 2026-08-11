@@ -1,0 +1,52 @@
+---
+title: Rating
+description: Star-based rating input with interactive and read-only modes.
+---
+
+### Interactive
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { RatingInteractive } from "@/app/components/Rating";
+
+<RatingInteractive />
+</div>
+
+### Usage
+```tsx
+import { Rating } from "sabalong-ui";
+
+const [value, setValue] = useState(3);
+
+<Rating value={value} onChange={setValue} />
+```
+
+### Read-only
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { RatingReadOnly } from "@/app/components/Rating";
+
+<RatingReadOnly />
+</div>
+
+### Usage
+```tsx
+import { Rating } from "sabalong-ui";
+
+<Rating value={4} readOnly />
+```
+
+### Ukuran
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { RatingSizes } from "@/app/components/Rating";
+
+<RatingSizes />
+</div>
+
+### Usage
+```tsx
+import { Rating } from "sabalong-ui";
+
+<Rating defaultValue={2} size="sm" />
+<Rating defaultValue={4} size="md" />
+<Rating defaultValue={5} size="lg" readOnly />
+```
+
+Set the number of stars with `max` (default `5`).

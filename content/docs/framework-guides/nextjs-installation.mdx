@@ -5,6 +5,8 @@ description: How to install and setup SabalongUI in NextJS
 
 ### Setup NextJS
 
+> **Tip:** prefer a ready-to-run project? Run `npm create sabalong-ui@latest` and pick **Next.js** — no manual steps needed.
+
 ```bash
 npx create-next-app@latest
 ```
@@ -26,8 +28,9 @@ export default config;
 ```
 
 ### Import tailwindcss
-```bash
+```css
 @import "tailwindcss";
+@source "../../node_modules/sabalong-ui/dist/**/*.{js,cjs,mjs}";
 ```
 
 ### Setup SabalongUI

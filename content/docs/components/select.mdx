@@ -1,0 +1,30 @@
+---
+title: Select
+description: Dropdown field for choosing a single option from a list.
+---
+
+### Select
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import SelectDemo from "@/app/components/Select";
+
+<SelectDemo />
+</div>
+
+### Usage
+```tsx
+import { Select } from "sabalong-ui";
+
+const options = [
+  { label: "React", value: "react" },
+  { label: "Next.js", value: "next" },
+];
+
+<Select
+  label="Framework"
+  placeholder="Choose a framework"
+  options={options}
+  onChange={(value) => console.log(value)}
+/>
+```
+
+Use `value` + `onChange` for a controlled mode, or `defaultValue` for uncontrolled.

@@ -1,0 +1,44 @@
+---
+title: RadioGroup
+description: Group of radio options with a single selectable value.
+---
+
+### Vertical
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { RadioGroupVertical } from "@/app/components/RadioGroup";
+
+<RadioGroupVertical />
+</div>
+
+### Usage
+```tsx
+import { RadioGroup } from "sabalong-ui";
+
+const plans = [
+  { label: "Starter — Free", value: "starter" },
+  { label: "Pro — $12/month", value: "pro" },
+];
+
+<RadioGroup label="Choose a plan" options={plans} onChange={(value) => console.log(value)} />
+```
+
+### Horizontal
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import { RadioGroupHorizontal } from "@/app/components/RadioGroup";
+
+<RadioGroupHorizontal />
+</div>
+
+### Usage
+```tsx
+import { RadioGroup } from "sabalong-ui";
+
+const themes = [
+  { label: "Light", value: "light" },
+  { label: "Dark", value: "dark" },
+];
+
+<RadioGroup label="Theme settings" options={themes} direction="horizontal" />
+```
+
+Set `direction="horizontal"` to arrange options in a row. Options with `disabled: true` are automatically disabled.

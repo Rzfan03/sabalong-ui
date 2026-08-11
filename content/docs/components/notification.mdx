@@ -1,0 +1,26 @@
+---
+title: Notification
+description: Toast-style alerts with a countdown progress bar that auto-dismisses.
+---
+
+### Notification with Countdown Progress
+<div className="h-fit border border-zinc-700 rounded-lg p-8 flex flex-col justify-center items-center gap-6">
+import NotificationDemo from "@/app/components/Notification";
+
+<NotificationDemo />
+</div>
+
+### Usage
+```tsx
+import { Notification } from "sabalong-ui";
+
+<Notification
+  variant="success"
+  title="Saved successfully!"
+  message="Your changes have been saved."
+  duration={5000}
+  onClose={() => {}}
+/>
+```
+
+The progress bar shrinks from `100%` to `0%` over `duration` ms (default `5000`), then `onClose` is fired automatically.

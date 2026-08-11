@@ -2,10 +2,11 @@ import React, { Children, ReactNode } from "react"
 
 interface IconWrapper{
     children: ReactNode;
-    Variant: 'default' | 'warning' | 'success' | 'danger'
+    Variant: 'default' | 'warning' | 'success' | 'danger';
+    className?: string
 }
 
-export function IconBox({children, Variant = "default"}: IconWrapper) {
+export function IconBox({children, Variant = "default", className = ""}: IconWrapper) {
     const ColorScheme = {
         default: 'bg-blue-500 inset-shadow-sm inset-shadow-blue-300',
         warning: 'bg-yellow-500 inset-shadow-sm inset-shadow-yellow-300',
@@ -15,7 +16,7 @@ export function IconBox({children, Variant = "default"}: IconWrapper) {
 
 
     return(
-        <div className={`p-2 w-fit h-fit flex justify-center items-center cursor-pointer ${ColorScheme[Variant]} rounded-lg text-shadow-md`}>
+        <div className={`p-2 w-fit h-fit flex justify-center items-center cursor-pointer ${ColorScheme[Variant]} rounded-lg text-shadow-md ${className}`}>
             {children}
         </div>
     )

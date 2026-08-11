@@ -1,0 +1,26 @@
+---
+title: Breadcrumb
+description: Navigation trail showing the current page location in the hierarchy.
+---
+
+### Breadcrumb
+<div className="h-[30vh] border border-zinc-700 rounded-lg p-8 flex justify-center items-center">
+import BreadcrumbDemo from "@/app/components/Breadcrumb";
+
+<BreadcrumbDemo />
+</div>
+
+### Usage
+```tsx
+import { Breadcrumb } from "sabalong-ui";
+
+<Breadcrumb
+  items={[
+    { label: "Home", href: "/" },
+    { label: "Docs", href: "/docs" },
+    { label: "Breadcrumb" },
+  ]}
+/>
+```
+
+The last item renders as the active page (no link). Other items with an `href` become links.
